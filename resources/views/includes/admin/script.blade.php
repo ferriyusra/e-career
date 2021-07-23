@@ -67,6 +67,11 @@
         tabsize: 2,
         height: 100
       });
+   $('#profil').summernote({
+        placeholder: 'Profil Layanan Karir..',
+        tabsize: 2,
+        height: 100
+      });
    $('#isi_kegiatan').summernote({
         placeholder: 'Isi Kegiatan..',
         tabsize: 2,
