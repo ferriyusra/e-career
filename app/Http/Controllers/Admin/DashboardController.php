@@ -17,19 +17,16 @@ class DashboardController extends Controller
         $berita = Berita::count();
         $loker = Loker::count();
         $responden = TracerStudy::count();
-        // $respondenByMhs = TracerStudy::count();
         $respondenByYear = DB::table('response_mahasiswa')
                             ->selectRaw('tahun_lulus, count(*) as jumlah')
                             ->groupBy('tahun_lulus')
                             ->get();
-        // dd($respondenByYear);
         $tahun = [];
         $mhs = [];
         foreach ($respondenByYear as  $res) {
             $tahun[] = $res->tahun_lulus;
             $mhs[] = (int)$res->jumlah;
         }
-        // dd($mhs);
         $chart = (new LarapexChart)->barChart()
                 ->setTitle('Statistik Jumlah Alumni Pertahun')
                 ->setSubtitle('Jumlah Alumni.')

@@ -59,9 +59,6 @@
                 <a class="collapse-item" href="{{ route('perusahaan.index')}}">
                     <i class="fas fa-fw fa-handshake"></i>
                    Data Perusahaan</a>
-                <a class="collapse-item" href="{{ route('sosmed.index')}}">
-                    <i class="fas fa-fw fa-handshake"></i>
-                   Data Sosmed</a>
             </div>
         </div>
     </li>

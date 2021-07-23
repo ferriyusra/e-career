@@ -45,6 +45,13 @@
                          <div class="alert alert-danger">{{ $message }}</div>
                      @enderror
                 </div>
+                <div class="form-group">
+                    <label for="profil">Profil Layanan Karir</label>
+                    <textarea name="profil" id="profil" class="form-control">{{old('profil', $item->profil)}}</textarea>
+                    @error('profil')
+                         <div class="alert alert-danger">{{ $message }}</div>
+                     @enderror
+                </div>
                 <button class="btn btn-primary btn-block" type="submit">Simpan</button>
             </form>
         </div>

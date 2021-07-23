@@ -62,10 +62,10 @@ Route::prefix('admin')
         Route::resource('kategori-berita', 'KategoriBeritaController');
 
         Route::resource('perusahaan', 'PerusahaanController');
-        Route::resource('sosmed', 'SosmedController');
         Route::resource('loker', 'LokerController');
 
         Route::resource('kuisioner', 'KuisionerController');
+        Route::post('kuisioner/import-soal', 'KuisionerController@importSoal')->name('kuisioner.importSoal');
         Route::resource('jawaban-kuisioner', 'JawabanKuisionerController');
 
         Route::resource('tentang-layanan-karir', 'TentangLayananKarirController');

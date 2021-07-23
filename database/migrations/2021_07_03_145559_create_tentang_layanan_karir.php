@@ -18,6 +18,7 @@ class CreateTentangLayananKarir extends Migration
             $table->text('visi');
             $table->text('misi');
             $table->text('tujuan');
+            $table->text('profil');
             $table->timestamps();
         });
     }

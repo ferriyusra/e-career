@@ -9,6 +9,9 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\KuisionerImport;
 
 class KuisionerController extends Controller
 {
@@ -82,6 +85,34 @@ class KuisionerController extends Controller
 
         return redirect()->route('kuisioner.index');
 
+    }
+
+    public function importSoal(Request $request){
+        $this->validate($request, [
+            'file' => 'required|mimes:csv,xls,xlsx'
+        ]);
+
+        $file = $request->file('file');
+
+        // membuat nama file unik
+        $nama_file = $file->hashName();
+
+        //temporary file
+        $path = $file->storeAs('public/excel/',$nama_file);
+
+        // import data
+        $import = Excel::import(new KuisionerImport(), storage_path('app/public/excel/'.$nama_file));
+
+        //remove from server
+        Storage::delete($path);
+
+        if($import) {
+            //redirect
+            return redirect()->route('kuisioner.index')->with(['success' => 'Data Soal Berhasil Diimport!']);
+        } else {
+            //redirect
+            return redirect()->route('kuisioner.index')->with(['error' => 'Data Soal Gagal Diimport!']);
+        }
     }
 
 }

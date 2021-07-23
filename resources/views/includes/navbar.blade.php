@@ -29,7 +29,7 @@
                                 <a class="nav-link" href="{{ route('isi-kuisioner')}}">Tracer Study</a>
                             </li>
                         </ul>
-                        @guest
+                        {{-- @guest
                         <form action="">
                             <div class="d-flex">
                                 <button type="button" class="btn btn-header" onclick="event.preventDefault(); location.href='{{ url('login') }}'; ">Admin</button>
@@ -45,7 +45,7 @@
                                 <button type="submit" class="btn btn-header">Keluar</button>
                             </div>
                         </form>
-                        @endauth
+                        @endauth --}}
                     </div>
                 </nav>
             </div>

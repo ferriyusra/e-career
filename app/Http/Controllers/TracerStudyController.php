@@ -56,20 +56,14 @@ class TracerStudyController extends Controller
         // dd($request->all());
 
         $request->validate([
-                    // 'soal_kuisioner.*'          => 'required|array',
-                    // 'jawaban_pilihan.*'         => 'required|array',
-                    // 'jawaban_essai.*'           => 'required|array',
                     'nama_mahasiswa'            => 'required',
-                    'npm_mahasiswa'             => 'required|integer',
-                    // 'npm_mahasiswa'             => 'required|integer|digits:8',
+                    'npm_mahasiswa'             => 'required|integer|digits:8|unique:response_mahasiswa',
                     'tempat_lahir_mahasiswa'    => 'required|string|max:50',
                     'tgl_lahir_mahasiswa'       => 'required',
-                    'nik_mahasiswa'             => 'required|integer',
-                    // 'nik_mahasiswa'             => 'required|integer|digits:16',
+                    'nik_mahasiswa'             => 'required|integer|digits:16|unique:response_mahasiswa',
                     'npwp_mahasiswa'            => 'required|integer',
-                    'no_telp_mahasiswa'         => 'required',
-                    // 'no_telp_mahasiswa'         => 'required|digits_between:10,12',
-                    'email_mahasiswa'           => 'required|string|email',
+                    'no_telp_mahasiswa'         => 'required|digits_between:10,12|unique:response_mahasiswa',
+                    'email_mahasiswa'           => 'required|string|email|unique:response_mahasiswa',
                     'tahun_lulus'               => 'required',
                     'program_studi'             => 'required',
                 ]);
@@ -102,8 +96,8 @@ class TracerStudyController extends Controller
                 
         AnswerResponseTracerStudy::insert($answers);
 
-        toast('Berhasil mengirimkan jawaban kuis', 'success');
-        return redirect()->route('isi-kuisioner');
+        alert()->success('Berhasil mengirimkan jawaban kuis', 'Terimakasih telah mengisi kuisioner');
+        return redirect()->route('home');
 
 
 

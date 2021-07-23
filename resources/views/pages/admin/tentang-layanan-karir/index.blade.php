@@ -23,6 +23,7 @@
                             <th>Visi</th>
                             <th>Misi</th>
                             <th>Tujuan</th>
+                            <th>Profil</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -33,6 +34,7 @@
                                     <td>{{ Str::limit($item->visi,50) }}</td>
                                     <td>{{ Str::limit($item->misi,50) }}</td>
                                     <td>{{ Str::limit($item->tujuan,50) }}</td>
+                                    <td>{{ Str::limit($item->profil,50) }}</td>
                                     <td>
                                         <a href="{{route('tentang-layanan-karir.edit', $item->id)}}" class="btn btn-info my-2">
                                             <i class="fa fa-pencil-alt"></i>
