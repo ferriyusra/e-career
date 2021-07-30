@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', 'HomeController@index')
     ->name('home');
 
@@ -79,4 +81,13 @@ Route::prefix('admin')
         Route::resource('respon-kuisioner', 'ResponKuisionerTracerStudyController');
     
     });
-Auth::routes(['verify' => true]);
+
+// Auth::routes([
+//     'register' => false, // Registration Routes...
+//     'reset' => false, // Password Reset Routes...
+// ]);
+Auth::routes([
+    'register' => false,
+    'reset' => false,
+    'verify' => true,
+]);

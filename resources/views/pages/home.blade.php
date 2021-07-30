@@ -11,7 +11,9 @@
                         <div class="mx-auto row">
                             <!-- Left Column -->
                             <div
-                                class="left-col flex-lg-grow-0 col-lg-6 p-0 d-flex flex-column align-items-lg-start text-lg-start align-items-center text-center" data-aos="fade-right">
+                                class="left-col flex-lg-grow-0 col-lg-6 p-0 d-flex flex-column align-items-lg-start text-lg-start align-items-center text-center" >
+                            {{-- <div
+                                class="left-col flex-lg-grow-0 col-lg-6 p-0 d-flex flex-column align-items-lg-start text-lg-start align-items-center text-center" data-aos="fade-right"> --}}
                                 <h1 class="title-font">
                                     <marquee behavior="" direction="">Layanan Karir<br /></marquee>
                                 </h1>
@@ -29,8 +31,11 @@
                             </div>
                             <!-- Right Column -->
                             <div
-                                class="col-lg-6 p-0 text-center justify-content-lg-end justify-content-center d-flex pe-0 position-relative" data-aos="fade-left">
+                                class="col-lg-6 p-0 text-center justify-content-lg-end justify-content-center d-flex pe-0 position-relative" >
                                 <div id="owl-header-7-2" class="owl-carousel owl-theme">
+                            {{-- <div
+                                class="col-lg-6 p-0 text-center justify-content-lg-end justify-content-center d-flex pe-0 position-relative" data-aos="fade-left">
+                                <div id="owl-header-7-2" class="owl-carousel owl-theme"> --}}
                                     @foreach ($GaleriKegiatan as $galeri)
                                     <div class="item">
                                         <img class="carousel-img img-fluid"
@@ -58,7 +63,8 @@
                
                     @foreach ($semuaGaleriKegiatan as $semuaGaleri)
                     <div class="col-lg-4">
-                        <figure class="figure" data-aos="flip-down">
+                        <figure class="figure" >
+                        {{-- <figure class="figure" data-aos="flip-down"> --}}
                             <div class="figure-img">
                                 <img src="{{ Storage::url($semuaGaleri->gambar)}}" class="figure-img img-fluid" style="width: 385px; height: 271px;">
                                 <a href="{{ route('detail-galeri', $semuaGaleri->slug )}}" class="d-flex justify-content-center">
@@ -88,11 +94,13 @@
                 <div id="owl-content-7-4" class="container-xxl mx-auto main-carousel owl-carousel owl-theme">
 
                     @foreach ($semuaBerita as $berita)
-                    <div class="item" data-aos="fade-right">
+                    <div class="item" >
+                    {{-- <div class="item" data-aos="fade-right"> --}}
+                        <lottie-player src="https://assets7.lottiefiles.com/temp/lf20_gNBoNM.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop autoplay></lottie-player>
                         <img id="1" class="slide-img" src="{{Storage::url($berita->gambar)}}" style="width: 420px; height: 350px;" />
                         <a href="{{ route('detail-berita', $berita->slug )}}" style="text-decoration: none">
                             <div class="card-item position-relative">
-                                <h3 class="slide-title">{{$berita->judul_berita}}</h3>
+                                <h3 class="slide-title text-capitalize">{{$berita->judul_berita}}</h3>
                                 <div class="d-flex justify-content-between">
                                     <p class="slide-caption">Baca Selengkapnya</p>
                                     <svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -133,13 +141,18 @@
                         <div class="col-lg-12">
                             <div class="mx-2 card-item position-relative w-100 h-100">
                                 <div
+                                    class="card-item-outline bg-white d-flex flex-column position-relative overflow-hidden h-100" >
+                                {{-- <div
                                     class="card-item-outline bg-white d-flex flex-column position-relative overflow-hidden h-100" data-aos="fade-up"
-                                    data-aos-anchor-placement="top-center">
+                                    data-aos-anchor-placement="top-center"> --}}
                                     <div class="row">
                                         <div class="col-md-4">
                                             <img src="{{Storage::url($loker->lokerPerusahaan->gambar)}}" class="img-fluid rounded mx-auto d-block" style="width: 200px; height: 80;">
                                         </div>
                                         <div class="col-md-8">
+                                             <div>
+                                            <lottie-player src="https://assets7.lottiefiles.com/temp/lf20_gNBoNM.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop autoplay></lottie-player>
+                                           </div>
                                             <h2 class="jobs-title text-capitalize">{{ $loker->posisi_lowongan}}</h2>
                                             <h2 class="jobs-value d-flex align-items-center">
                                                 <span style="color: #112340;">IDR <span>{{ number_format($loker->rentang_gaji_min, 0, '.', '.') }} - {{ number_format($loker->rentang_gaji_max, 0, '.', '.') }}</span>
@@ -250,4 +263,6 @@ $("#owl-content-7-4").owlCarousel({
     },
 });
 </script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 @endpush

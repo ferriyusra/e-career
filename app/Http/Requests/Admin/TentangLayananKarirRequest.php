@@ -27,7 +27,7 @@ class TentangLayananKarirRequest extends FormRequest
             'visi'      => 'required',
             'misi'      => 'required',
             'tujuan'    => 'required',
-            'profl'     => 'required'
+            'profil'     => 'required'
         ];
     }
 }

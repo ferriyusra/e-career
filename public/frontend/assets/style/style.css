@@ -6,11 +6,24 @@ html {
     scroll-behavior: smooth !important;
 } */
 
+.header-7-2 {
+    background-color: #112340;
+}
+
 .header-7-2 .navbar-light .navbar-nav .nav-link {
     font: 500 0.75rem/1rem "Inter", sans-serif;
     letter-spacing: 0.1em;
-    color: #2c3a4f;
+    color: #ffffff;
     transition: 0.3s;
+}
+
+button.navbar-toggler {
+    border-color: #ffffff !important;
+}
+
+.navbar-light span.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    color: #ffffff !important;
 }
 
 .header-7-2 .navbar-light .navbar-nav .nav-link.active,
@@ -29,14 +42,14 @@ html {
     font: 700 0.75rem/1rem "Inter", sans-serif;
     border-radius: 999px;
     letter-spacing: 0.1em;
-    color: #112340;
+    color: #ffffff;
     border: 1px solid #304972;
     transition: 0.2s;
 }
 
 .header-7-2 .btn-header:hover {
-    color: #ffffff;
-    background-color: #112340;
+    color: #112340;
+    background-color: #ffffff;
     border-color: #304972;
     transition: 0.2s;
 }
@@ -48,21 +61,6 @@ html {
 .header-7-2 button:focus {
     outline: none;
 }
-
-/* .header-7-2 .btn-how {
-  font: 500 1.125rem/1.75rem "Inter", sans-serif;
-  padding: 1rem 2.25rem;
-  border-radius: 999px;
-  border: 1px solid #aaaaaa;
-  color: #aaaaaa;
-  transition: 0.2s;
-}
-
-.header-7-2 .btn-how:hover {
-  border: 1px solid #1a5aff;
-  color: #1a5aff;
-  transition: 0.2s;
-} */
 
 .header-7-2 .btn-jobs {
     font: 500 1.125rem/1.75rem "Inter", sans-serif;
@@ -82,7 +80,7 @@ html {
 .header-7-2 .title-font {
     font: 800 2.25rem/1.25 "Inter", sans-serif;
     letter-spacing: -0.025em;
-    color: #112340;
+    color: #ffffff;
     margin-bottom: 1.5rem;
     margin-top: 1rem;
 }
@@ -92,7 +90,7 @@ html {
     line-height: 2rem;
     letter-spacing: 0.05em;
     margin-bottom: 2rem;
-    color: #7d8797;
+    color: #caccce;
 }
 
 .header-7-2 .carousel-number {
@@ -358,7 +356,7 @@ html {
 
 /* foooter */
 .footer-4-1 .list-footer li a {
-    color: #112340;
+    color: #ffffff;
     transition: 0.3s;
 }
 
@@ -386,7 +384,7 @@ html {
     font-size: 1rem;
     line-height: 2rem;
     letter-spacing: 1%;
-    color: #112340;
+    color: #ffffff;
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
 }
@@ -394,7 +392,7 @@ html {
 .footer-4-1 .title-font {
     font: 600 1.125rem/1.75rem "Inter", sans-serif;
     margin-bottom: 1.25rem;
-    color: #112340;
+    color: #ffffff;
 }
 
 .footer-4-1 .text-base {
@@ -407,7 +405,7 @@ html {
 }
 
 .footer-4-1 a.footer-link {
-    color: #112340;
+    color: #ffffff;
     transition: 0.1s;
 }
 

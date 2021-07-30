@@ -17,8 +17,6 @@ class TentangLayananKarirController extends Controller
 
         $items = TentangLayananKarir::get();
 
-        // dd($items);
-
         return view('pages.layanan-karir', [
             'items' => $items,
         ]);

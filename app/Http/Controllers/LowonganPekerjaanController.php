@@ -38,16 +38,7 @@ class LowonganPekerjaanController extends Controller
                                     ->orderBy('id', 'desc')
                                     ->get();
 
-        // $kategoriLokerLokasi = DB::table('loker')
-        //                         ->select('lokasi_detail_lowongan', DB::raw('count(*) as id'))
-        //                         ->groupBy('lokasi_detail_lowongan')
-        //                         ->get();
-
-        // $kategoriLokerLokasi = Loker::groupBy('lokasi_detail_lowongan')->get();
-
-
-        // dd($kategoriLokerPerusahaan);
-
+      
         return view('pages.lowongan-pekerjaan', [
             'semuaLoker' => $semuaLoker,
             'kategoriLokerPekerjaTetap' => $kategoriLokerPekerjaTetap,
@@ -137,16 +128,6 @@ class LowonganPekerjaanController extends Controller
         })->with('lokerPerusahaan')->paginate(2);
 
 
-        // dd($filterLokerPerusahaan);
-        
-        // if($cari == null){
-        //     abort(404);
-        // }
-
-        // if($lokasi == null){
-        //     abort(404);
-        // }
-
         return view('pages.filter-loker', [
             'kategoriLokerLokasi' => $kategoriLokerLokasi,
             'kategoriLokerPerusahaan' => $kategoriLokerPerusahaan,
@@ -183,9 +164,6 @@ class LowonganPekerjaanController extends Controller
             $query->where('perusahaan_id', $perusahaan);
         })->with('lokerPerusahaan')->paginate(2);
 
-        // dd($filterLoker);
-
-        
         return view('pages.filter-loker', [
             'kategoriLokerLokasi' => $kategoriLokerLokasi,
             'kategoriLokerPerusahaan' => $kategoriLokerPerusahaan,
