@@ -11,8 +11,8 @@ html {
 }
 
 .header-7-2 .navbar-light .navbar-nav .nav-link {
-    font: 500 0.75rem/1rem "Inter", sans-serif;
-    letter-spacing: 0.1em;
+    font: 500 14px "Inter", sans-serif;
+    /* letter-spacing: 0.1em; */
     color: #ffffff;
     transition: 0.3s;
 }
@@ -32,7 +32,7 @@ button.navbar-toggler {
 }
 
 .header-7-2 .header-sticky.scrolled {
-    background-color: #fff !important;
+    background-color: #112340 !important;
     transition: background-color 200ms linear, box-shadow 300ms linear;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
 }
