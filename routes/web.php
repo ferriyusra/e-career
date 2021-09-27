@@ -87,7 +87,7 @@ Route::prefix('admin')
 //     'reset' => false, // Password Reset Routes...
 // ]);
 Auth::routes([
-    'register' => false,
-    'reset' => false,
+    'register' => true,
+    'reset' => true,
     'verify' => true,
 ]);

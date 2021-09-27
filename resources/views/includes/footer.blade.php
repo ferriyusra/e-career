@@ -1,9 +1,9 @@
   <!-- footer -->
-  <footer class="footer-4-1 border-top mt-4" style="font-family: 'Inter', sans-serif; background-color: #112340">
+  <footer class="footer-4-1 border-top mt-0" style="font-family: 'Inter', sans-serif; background-color: #112340">
     <div class="container-xxl mx-auto main">
         <div class="d-flex flex-lg-row flex-column" style="margin-bottom: 5rem">
             <div class="left-col mb-lg-0 mb-5">
-                <img src="{{url('frontend/assets/img/logo/stmik3.png')}}" class="img-fluid" style="width: 50%;">
+                <img src="{{ url('frontend/assets/img/logo/logo.png')}}" class="img-fluid" style="width: 50%;">
                 <h5 class="caption-font">
                     Alamat : <br class="d-md-block d-none">Jl. BRI Radio Dalam No.17, RT.14/RW.3,
                     Gandaria Utara, <br class="d-md-block d-none"> Kec. Kby. Baru, Kota Jakarta Selatan, .<br

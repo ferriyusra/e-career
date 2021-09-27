@@ -13,6 +13,7 @@ class Loker extends Model
     protected $guarded = ['id'];
 
     public function lokerPerusahaan(){
+        // dd($this->belongsTo(Perusahaan::class, 'perusahaan_id', 'id'));
         return $this->belongsTo(Perusahaan::class, 'perusahaan_id', 'id');
     }
 

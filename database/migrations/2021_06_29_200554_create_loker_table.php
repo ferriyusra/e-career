@@ -17,7 +17,7 @@ class CreateLokerTable extends Migration
             $table->id();
 
             $table->unsignedInteger('perusahaan_id');
-            $table->foreign('perusahaan_id')->references('id')->on('perusahaan');
+            $table->foreign('perusahaan_id')->references('id')->on('perusahaan')->onDelete('cascade')->onUpdate('cascade');;
 
             $table->text('lokasi_detail_lowongan');
             $table->text('deskripsi_lowongan');

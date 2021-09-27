@@ -8,6 +8,8 @@ html {
 
 .header-7-2 {
     background-color: #112340;
+    /* background-color: #12af92; */
+    /* background-color: #00c4cc; */
 }
 
 .header-7-2 .navbar-light .navbar-nav .nav-link {
@@ -241,17 +243,17 @@ button.navbar-toggler {
 
 .content-7-4 .title-text {
     font: 800 2.25rem/2.5rem "Inter", sans-serif;
-    color: #112340;
+    color: #afafaf;
 }
 
 .content-7-4 .see-all {
     font: 500 1.125rem/1.75rem "Inter", sans-serif;
-    color: #112340;
+    color: #afafaf;
     transition: 0.2s;
     text-decoration: underline;
 }
 .content-7-4 .see-all:hover {
-    color: #afafaf;
+    color: #1d3b6d;
     transition: 0.5s;
     text-decoration: underline;
 }
@@ -682,6 +684,19 @@ button.navbar-toggler {
         padding: 1rem;
     }
 }
+@media (min-width: 360px) {
+    .content-3-7 h2.jobs-value {
+        font: 500 0.8rem Inter, sans-serif;
+    }
+    .content-3-7 h1.title-font-jobs {
+        font: 500 2rem Inter, sans-serif;
+    }
+    .wrapp-loker-serupa h1.jobs-title {
+        font-size: 1.8rem;
+        margin-top: 35px;
+        text-align: center;
+    }
+}
 
 @media (min-width: 768px) {
     .content-3-7 {
@@ -1011,10 +1026,10 @@ button.navbar-toggler {
 }
 
 /* end detail content */
-.card-horizontal {
-    display: flex;
-    flex: 1 1 auto;
-}
+/* .card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+} */
 
 /* paginate */
 .pagination > li > a {
@@ -1308,3 +1323,21 @@ button.navbar-toggler {
     opacity: 1;
 }
 /* gallery */
+
+/* wrapper content */
+.wrapper-content {
+    background: rgb(27, 41, 63);
+    background: radial-gradient(
+        circle,
+        rgba(27, 41, 63, 1) 0%,
+        rgba(19, 41, 77, 1) 100%
+    );
+    /* background: linear-gradient(-45deg, #fdc800, #756115, #23a6d5, #23d5ab); */
+    /* background-size: 400% 400%; */
+    /* background-size: 200% 200%; */
+}
+
+.ml2 .letter {
+    line-height: 1em;
+    /* color: #f5a716; */
+}

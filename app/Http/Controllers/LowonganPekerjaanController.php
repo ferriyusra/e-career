@@ -17,7 +17,8 @@ class LowonganPekerjaanController extends Controller
     public function index()
     {
 
-        $semuaLoker = Loker::with(['lokerPerusahaan'])->paginate(4);
+        // $semuaLoker = Loker::with(['lokerPerusahaan'])->paginate(4);
+        $semuaLoker = Loker::with(['lokerPerusahaan'])->orderBy('id', 'desc')->paginate(4);
 
         $kategoriLokerPekerjaTetap = Loker::where('tipe_pekerjaan', 'Pekerja Tetap')->count();
         $kategoriLokerPekerjaMagang = Loker::where('tipe_pekerjaan', 'Magang')->count();
@@ -55,6 +56,9 @@ class LowonganPekerjaanController extends Controller
         $loker = Loker::with(['lokerPerusahaan'])
                     ->where('slug', $slug)->firstOrFail();
 
+
+        // dd($loker);
+
         $lokerLain = Loker::with(['lokerPerusahaan'])->orderBy('id', 'desc')->limit(2)->get();
 
         return view('pages.detail-lowongan', [
@@ -65,8 +69,6 @@ class LowonganPekerjaanController extends Controller
     }
 
     public function cariLoker(Request $request){
-
-   
 
         $kategoriLokerLokasi = DB::table('loker')
                                     ->select('lokasi_detail_lowongan', DB::raw('count(*) as id'))

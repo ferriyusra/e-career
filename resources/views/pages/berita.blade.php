@@ -11,7 +11,7 @@
             <div class="container-xxl mx-auto">
                 <div class="content-section px-5">
                     <h1 class="title-font text-center">
-                        Lihat informasi dari pusat<br />Layanan Karir
+                        Lihat informasi dari Pusat<br />Layanan Karir
                     </h1>
                     <p class="caption-font text-center">
                         Lihat informasi mengenai seputar seminar, workshop dan lainnya di website pusat layanan karir.
@@ -98,12 +98,3 @@
     <!-- end paginate -->
 
 @endsection
-{{-- @push('prepend-style')
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-@endpush
-@push('addon-script')
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-@endpush --}}

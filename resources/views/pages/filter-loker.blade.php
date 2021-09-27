@@ -20,7 +20,7 @@
                     </p>
                 </div>
                 <div class="row mt-5 mb-5">
-                    <div class="col-lg-12 mx-5">
+                    <div class="col-lg-12 px-5">
                         <form action="{{route('cari-lowongan')}}" method="get" class="content-3-5">
                             <div class="row">
                                 <div class="col-lg-10">
@@ -34,12 +34,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-2">
-                                    <div class="col-lg-3">
-                                        <button class="btn btn-fill text-white d-block text-center" type="submit">
-                                            Cari
-                                        </button>
-                                    </div>
+                                <div class="col-lg-2 col-12 d-flex flex-column">
+                                    <button class="btn btn-fill text-white  text-center" type="submit">
+                                        Cari
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -49,7 +47,7 @@
                     <div class="col-lg-12">
                         <form style="margin-top: -1.75rem" action="" method="post" class="content-3-5">
                             <div class="row">
-                                <div class="col-lg-12 text-center">
+                                <div class="col-lg-12 text-center d-flex justify-content-center">
                                     <div class="empty">
 
                                         <div class="btn-group px-2" role="group">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Semua Galeri Kegiatan
+    Galeri Kegiatan
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
             <div class="container-xxl mx-auto">
                 <div class="content-section px-5">
                     <h1 class="title-font text-center">
-                        Lihat Kegiatan dari pusat<br />Layanan Karir
+                        Lihat Kegiatan dari Pusat<br />Layanan Karir
                     </h1>
                     <p class="caption-font text-center">
                         Lihat informasi mengenai kegiatan yang dilakukan oleh pusat layanan karir.

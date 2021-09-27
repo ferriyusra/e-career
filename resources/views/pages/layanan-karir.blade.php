@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Tentang Layanan Karir STI&K
+    Tentang Kami
 @endsection
 
 @section('content')
@@ -17,10 +17,10 @@
                                     Beranda
                                 </li>
                                 <li class="breadcrumb-item " aria-current="page" style="color: #304970;">
-                                    Tentang Layanan Karir
+                                    Tentang Kami
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Profil Visi Misi dan Tujuan Layanan Karir
+                                    Profil Visi Misi dan Tujuan Pusat Layanan Karir
                                 </li>
                             </ol>
                         </nav>
@@ -29,7 +29,7 @@
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0">
                         <div class="card card-details">
-                            <h1 class="jobs-title">Visi Misi Layanan Karir STMIK Jakarta STI&K</h1>
+                            <h1 class="jobs-title">Visi Misi Pusat Layanan Karir STMIK Jakarta STI&K</h1>
                             <hr />
                             <div class="jobs-required">
                                 <div class="row">
@@ -62,7 +62,7 @@
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0">
                         <div class="card card-details">
-                            <h1 class="jobs-title">Tujuan Layanan Karir STMIK Jakarta STI&K</h1>
+                            <h1 class="jobs-title">Tujuan Pusat Layanan Karir STMIK Jakarta STI&K</h1>
                             <hr />
                             <div class="jobs-required">
                                 <div class="row">
@@ -84,7 +84,7 @@
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0">
                         <div class="card card-details">
-                            <h1 class="jobs-title">Profil Layanan Karir STMIK Jakarta STI&K</h1>
+                            <h1 class="jobs-title">Profil Pusat Layanan Karir STMIK Jakarta STI&K</h1>
                             <hr />
                             <div class="jobs-required">
                                 <div class="row">

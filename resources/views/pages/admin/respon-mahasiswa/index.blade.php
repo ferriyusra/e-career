@@ -8,17 +8,14 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Berikut ini Data Mahasiswa yang telah menjawab Kuisioner</h1>
     </div>
-    <a href="{{ route('print-all-mhs.print')}}" class="btn btn-md btn-success shadow-sm">
+    {{-- <a href="{{ route('print-all-mhs.print')}}" class="btn btn-md btn-success shadow-sm">
         <i class="fas fa-file-pdf fa-sm text-white-50"></i>
         Export Data Mahasiswa PDF
-    </a>
-    {{-- <button class="btn btn-md btn-success shadow-sm exportAllMhs">
-        <i class="fas fa-file-pdf fa-sm text-white-50"></i>
-        Export Data Mahasiswa PDF
-    </button> --}}
-    <div class="row">
+    </a> --}}
+
+    <div class="row table-responsive">
         <div class="card-body">
-            <div class="table-responsive">
+            <div class="">
                 <table class="table table-bordered" id="example" width="100%" cellspacing="0" style="max-width: none !important">
                     <thead>
                         <tr>

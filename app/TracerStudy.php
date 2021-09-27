@@ -24,14 +24,6 @@ class TracerStudy extends Model
         return $this->hasMany(AnswerResponseTracerStudy::class, 'id_mhs', 'id');
     }
 
-    // public function jawabanMahasiswa(){
-    //     return $this->belongsTo(JawabanKuisioner::class, 'id_kuisioner', 'id');
-    // }
-
-    // public function soalJawabanMahasiswa(){
-    //     return  $this->belongsTo(Kuisioner::class, 'id_soal', 'id');
-    // }
-
 }
 
 

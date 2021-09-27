@@ -7,7 +7,7 @@
 @section('content')
           <!-- section lowongan detail -->
         <section class="section-details-header"></section>
-        <section class="section-details-content">
+        <section class="section-details-content mb-5">
             <div class="container">
                 <div class="row">
                     <div class="col p-0">
@@ -53,11 +53,12 @@
 
 
                     <!-- right column -->
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 wrapp-loker-serupa">
                         <h1 class="jobs-title">Berita lainnya </h1>
                         @foreach ($semuaBerita as $berita)
                         <div class="card card-details mb-3">
-                            <img src="{{Storage::url($berita->gambar)}}" alt="" class="img-fluid mx-auto d-block">
+                            <img src="{{Storage::url($berita->gambar)}}" alt=""   class="rounded mx-auto d-block"
+                                style="width: 50%; height: 50%;">
                             <h1 class="jobs-title text-capitalize mt-2">{{$berita->judul_berita}}</h1>
                             <hr>
                             <a href="{{ route('detail-berita', $berita->slug )}}" class="see-all-jobs">Baca Selengkapnya</a>

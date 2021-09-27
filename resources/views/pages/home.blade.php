@@ -12,11 +12,9 @@
                             <!-- Left Column -->
                             <div
                                 class="left-col flex-lg-grow-0 col-lg-6 p-0 d-flex flex-column align-items-lg-start text-lg-start align-items-center text-center" >
-                            {{-- <div
-                                class="left-col flex-lg-grow-0 col-lg-6 p-0 d-flex flex-column align-items-lg-start text-lg-start align-items-center text-center" data-aos="fade-right"> --}}
-                                <h1 class="title-font">
-                                    <marquee behavior="" direction="">Layanan Karir<br /></marquee>
-                                </h1>
+                                    <h1 class="title-font ml2">
+                                       Pusat Layanan Karir<br class="d-lg-block d-none" />
+                                    </h1>
                                 <p class="caption-font">
                                     Selamat Datang diwebsite Layanan Karir STMIK Jakarta STI&K<br class="d-sm-block d-none" />
                                     Diwebsite ini akan memberikan informasi seputar layanan karir<br class="d-sm-block d-none" />
@@ -24,7 +22,7 @@
                                 </p>
                                 <div
                                     class="d-inline-block align-items-center mx-auto mx-lg-0 d-lg-flex justify-content-center gap-sm-3 gap-0">
-                                    <a href="#loker" class="btn btn-jobs text-white mb-3 mb-md-0">
+                                    <a href="{{url("semua-lowongan")}}" class="btn btn-jobs text-white mb-3 mb-md-0">
                                        Informasi Lowongan Pekerjaan
                                     </a>
                                 </div>
@@ -33,9 +31,6 @@
                             <div
                                 class="col-lg-6 p-0 text-center justify-content-lg-end justify-content-center d-flex pe-0 position-relative" >
                                 <div id="owl-header-7-2" class="owl-carousel owl-theme">
-                            {{-- <div
-                                class="col-lg-6 p-0 text-center justify-content-lg-end justify-content-center d-flex pe-0 position-relative" data-aos="fade-left">
-                                <div id="owl-header-7-2" class="owl-carousel owl-theme"> --}}
                                     @foreach ($GaleriKegiatan as $galeri)
                                     <div class="item">
                                         <img class="carousel-img img-fluid"
@@ -83,44 +78,43 @@
         </section>
         <!-- end section gallery -->     
         
+    <main class="wrapper-content">
         <!-- section berita -->
-        <section>
-            <div class="content-7-4" style="font-family: 'Inter', sans-serif">
-                <div
-                    class="container-xxl mx-auto main-top d-flex flex-md-row flex-column justify-content-between align-items-lg-end align-items-start gap-md-0 gap-4">
-                    <h2 class="title-text">Berita Terbaru</h2>
-                    <a href="{{url('/semua-berita')}}" class="see-all">Semua Berita</a>
-                </div>
-                <div id="owl-content-7-4" class="container-xxl mx-auto main-carousel owl-carousel owl-theme">
-
-                    @foreach ($semuaBerita as $berita)
-                    <div class="item" >
-                    {{-- <div class="item" data-aos="fade-right"> --}}
-                        <lottie-player src="https://assets7.lottiefiles.com/temp/lf20_gNBoNM.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop autoplay></lottie-player>
-                        <img id="1" class="slide-img" src="{{Storage::url($berita->gambar)}}" style="width: 420px; height: 350px;" />
-                        <a href="{{ route('detail-berita', $berita->slug )}}" style="text-decoration: none">
-                            <div class="card-item position-relative">
-                                <h3 class="slide-title text-capitalize">{{$berita->judul_berita}}</h3>
-                                <div class="d-flex justify-content-between">
-                                    <p class="slide-caption">Baca Selengkapnya</p>
-                                    <svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19.75 11.7257L4.75 11.7257" stroke="#112340" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M13.7002 5.70131L19.7502 11.7253L13.7002 17.7503" stroke="#112340"
-                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
+            <section>
+                <div class="content-7-4" style="font-family: 'Inter', sans-serif">
+                    <div
+                        class="container-xxl mx-auto main-top d-flex flex-md-row flex-column justify-content-between align-items-lg-end align-items-start gap-md-0 gap-4">
+                        <h2 class="title-text">Berita Terbaru</h2>
+                        <a href="{{url('/semua-berita')}}" class="see-all">Semua Berita</a>
                     </div>
-                    @endforeach
+                    <div id="owl-content-7-4" class="container-xxl mx-auto main-carousel owl-carousel owl-theme">
 
+                        @foreach ($semuaBerita as $berita)
+                        <div class="item" >
+                            <img id="1" class="slide-img img-thumbnail" src="{{Storage::url($berita->gambar)}}" style="width: 420px; height: 350px;" />
+                            <a href="{{ route('detail-berita', $berita->slug )}}" style="text-decoration: none">
+                                <div class="card-item position-relative">
+                                    <h3 class="slide-title text-capitalize">{{$berita->judul_berita}}</h3>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="slide-caption">Baca Selengkapnya</p>
+                                        <svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.75 11.7257L4.75 11.7257" stroke="#112340" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M13.7002 5.70131L19.7502 11.7253L13.7002 17.7503" stroke="#112340"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        @endforeach
+
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         <!-- end section berita -->
-
+    </main>
 
         <!-- section lowongan -->
         <section id="loker">
@@ -136,23 +130,16 @@
                         </p>
                     </div>
                     <div class="row">
-
                         @foreach ($lowonganKerja as $loker)
                         <div class="col-lg-12">
                             <div class="mx-2 card-item position-relative w-100 h-100">
                                 <div
                                     class="card-item-outline bg-white d-flex flex-column position-relative overflow-hidden h-100" >
-                                {{-- <div
-                                    class="card-item-outline bg-white d-flex flex-column position-relative overflow-hidden h-100" data-aos="fade-up"
-                                    data-aos-anchor-placement="top-center"> --}}
                                     <div class="row">
                                         <div class="col-md-4">
                                             <img src="{{Storage::url($loker->lokerPerusahaan->gambar)}}" class="img-fluid rounded mx-auto d-block" style="width: 200px; height: 80;">
                                         </div>
                                         <div class="col-md-8">
-                                             <div>
-                                            <lottie-player src="https://assets7.lottiefiles.com/temp/lf20_gNBoNM.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop autoplay></lottie-player>
-                                           </div>
                                             <h2 class="jobs-title text-capitalize">{{ $loker->posisi_lowongan}}</h2>
                                             <h2 class="jobs-value d-flex align-items-center">
                                                 <span style="color: #112340;">IDR <span>{{ number_format($loker->rentang_gaji_min, 0, '.', '.') }} - {{ number_format($loker->rentang_gaji_max, 0, '.', '.') }}</span>
@@ -203,6 +190,7 @@
 
         </section>
         <!-- end section lowongan -->
+  
 @endsection
 
 @push('prepend-style')
@@ -217,11 +205,34 @@ href="{{ url('frontend/assets/owl-carousel/owl.theme.default.min.css')}}" />
 @endpush
 
 @push('addon-script')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
 </script>
 <script src="{{url('frontend/assets/owl-carousel/owl.carousel.min.js')}}"></script>
+<script>
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter' style='color: #f5a716'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
 <!-- Owl Carousel Script -->
 <script>
 $("#owl-header-7-2").owlCarousel({

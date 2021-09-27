@@ -53,7 +53,8 @@
                         <h1 class="jobs-title">Galeri Kegiatan lainnya </h1>
                         @foreach ($semuaGaleriKegiatan as $galeri)
                         <div class="card card-details mb-3">
-                            <img src="{{Storage::url($galeri->gambar)}}" alt="" class="img-fluid mx-auto d-block">
+                            <img src="{{Storage::url($galeri->gambar)}}" alt=""  class="rounded mx-auto d-block"
+                                style="width: 50%; height: 50%;">
                             <h1 class="jobs-title text-capitalize mt-2">{{$galeri->judul_berita}}</h1>
                             <hr>
                             <a href="{{ route('detail-galeri', $galeri->slug )}}" class="see-all-jobs">Baca Selengkapnya</a>

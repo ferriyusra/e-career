@@ -20,36 +20,34 @@
                     </p>
                 </div>
                 <div class="row mt-5 mb-5">
-                    <div class="col-lg-12 mx-5">
+                    <div class="col-lg-12 px-5">
                         <form action="{{route('cari-lowongan')}}" method="get" class="content-3-5">
                             <div class="row">
-                                <div class="col-lg-10">
+                                <div class="col-lg-10 col-lg-12">
                                     <div style="margin-bottom: 0.5rem">
                                         <label for="" class="d-block input-label-filter">Cari Posisi Lowongan
                                         </label>
-                                        <div class="d-flex w-100 div-input">
+                                        <div class="div-input">
                                             <input class="input-field border-0" name="posisi_lowongan"
                                                 id="posisi_lowongan" type="text"
                                                 placeholder="Contoh : Web Developer, Junior Backend..." />
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-2">
-                                    <div class="col-lg-3">
-                                        <button class="btn btn-fill text-white d-block text-center" type="submit">
-                                            Cari
-                                        </button>
-                                    </div>
+                                <div class="col-lg-2 col-12 d-flex flex-column">
+                                    <button class="btn btn-fill text-white  text-center" type="submit">
+                                        Cari
+                                    </button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="row mt-5 mb-5">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 px-5">
                         <form style="margin-top: -1.75rem" action="" method="post" class="content-3-5">
                             <div class="row">
-                                <div class="col-lg-12 text-center">
+                                <div class="col-lg-12 text-center d-flex justify-content-center">
                                     <div class="empty">
                                         <div class="btn-group px-2" role="group">
                                             <button id="btnGroupDrop2" type="button"
@@ -106,7 +104,7 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <img src="{{Storage::url($loker->lokerPerusahaan->gambar)}}" alt="{{$loker->lokerPerusahaan->nama_perusahaan}}"
-                                            class="img-fluid mx-auto d-block" style="">
+                                            class="img-fluid mx-auto d-block" style="width: 80px; height: 80px;">
                                     </div>
                                     <div class="col-md-8">
                                         <h2 class="jobs-title text-capitalize">{{$loker->posisi_lowongan}}</h2>

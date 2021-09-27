@@ -4,7 +4,7 @@
             <div class="container-xxl mx-auto p-0 position-sticky" style="z-index: 50;top: 0;">
                 <nav class="header-sticky navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="{{ url('/')}}">
-                        <img src="{{ url('frontend/assets/img/logo/stmik3.png')}}" class="img-fluid" style="width: 80%;">
+                        <img src="{{ url('frontend/assets/img/logo/logo.png')}}" class="img-fluid" style="width: 80%;">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"

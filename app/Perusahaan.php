@@ -16,12 +16,10 @@ class Perusahaan extends Model
         'nama_perusahaan', 'tentang_perusahaan', 'lokasi_perusahaan', 'gambar'
     ];
 
-    public function sosmed(){
-        return $this->hasMany(Sosmed::class, 'perusahaan_id', 'id');
-    }
-
     public function loker(){
         return $this->hasMany(Loker::class, 'perusahaan_id', 'id');
+        // return $this->hasMany(Loker::class, 'perusahaan_id', 'id');
     }
+
 
 }
