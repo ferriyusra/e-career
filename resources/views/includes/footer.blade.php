@@ -73,7 +73,7 @@
             <div
                 class="container p-0 d-flex flex-lg-row flex-column-reverse gap-4 justify-content-between align-items-center mt-5">
                 <nav class="text-base text-start" style="color: #ffffff;;">
-                    <p>© Eka Widya Ningsih 2021 </p>
+                    <p>© Pusat Layanan Karir 2021 </p>
                 </nav>
                 <div class="d-flex gap-4">
                     <a class="footer-link text-base text-start text-decoration-none" href="{{route('isi-kuisioner')}}">Pengisian Kuisioner</a>
